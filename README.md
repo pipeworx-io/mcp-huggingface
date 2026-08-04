@@ -1,23 +1,30 @@
-# mcp-huggingface
+# @pipeworx/huggingface
 
-Hugging Face Hub MCP — models, datasets, spaces
+Hugging Face Hub MCP — search and inspect models, datasets, and Spaces on the largest open ML repository. No auth required for public reads.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `search_models` | Browse / search models on the Hub. |
-| `search_datasets` | Browse / search datasets on the Hub. |
-| `search_spaces` | Browse / search Spaces (demo apps). |
-| `get_model` | Detailed model info — config, tags, downloads, files at root. |
-| `get_dataset` | Detailed dataset info. |
-| `get_space` | Detailed Space info. |
-| `list_model_files` | List files at the root of a model repo. |
-| `list_dataset_files` | List files in a dataset repo. |
-| `trending_models` | Currently-trending models on the Hub. |
-| `trending_datasets` | Currently-trending datasets. |
+- `search_models(search?, author?, library?, language?, pipeline_tag?, tags?, sort?, direction?, limit?, full?)`
+- `search_datasets(search?, author?, language?, task_categories?, sort?, direction?, limit?, full?)`
+- `search_spaces(search?, author?, sdk?, sort?, direction?, limit?, full?)`
+- `get_model(repo_id, revision?)`
+- `get_dataset(repo_id, revision?)`
+- `get_space(repo_id, revision?)`
+- `list_model_files(repo_id, revision?)` / `list_dataset_files(repo_id, revision?)`
+- `trending_models(limit?)` / `trending_datasets(limit?)`
+
+## Auth
+
+Public reads are keyless. Higher rate limits and gated/private repos require a token — optional:
+
+- **Platform key (optional):** gateway env `PLATFORM_HF_KEY`
+- **BYO (optional):** `?_apiKey=<hf_token>`
+
+## Data source
+
+`https://huggingface.co/api/` — public REST.
 
 ## Quick Start
 
@@ -33,7 +40,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -57,7 +64,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
