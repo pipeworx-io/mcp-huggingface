@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-huggingface",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Hugging Face Hub MCP — models, datasets, spaces",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "huggingface",
     "gatewaySlug": "huggingface",
-    "sourceHash": "v1-2c67d52fbd5fc5c8724f144bd0612ee84bd90c460483858624e72be80426d7fe",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-31397054470246ebbd8dbd7d20274d64295369c0fe1ac7c18c613b617fb5fa2e",
+    "sourceCommit": "0ca9712c0ac03bb0121cc7e81b202d0c45ac02ca"
   }
 }
